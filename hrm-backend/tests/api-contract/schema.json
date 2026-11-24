@@ -1,0 +1,6762 @@
+{
+ "AttendanceDailyReport.fromJson": {
+  "class": "AttendanceDailyReport",
+  "file": "data/model/attendance_daily_report.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "date_wise_report": {
+      "dart": "List<DateWiseReport>?",
+      "guarded": false,
+      "src": "dateWiseReport: List<DateWiseReport>.from(json[\"date_wise_report\"].map((x) => DateWiseReport.fromJson(x))),  )",
+      "list": true,
+      "class": "DateWiseReport",
+      "fields": {
+       "full_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "fullDate: json[\"full_date\"],"
+       },
+       "week_day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "weekDay: json[\"week_day\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "remote_mode_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "remoteModeIn: json[\"remote_mode_in\"],"
+       },
+       "remote_mode_out": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "remoteModeOut: json[\"remote_mode_out\"],"
+       },
+       "check_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkIn: json[\"check_in\"],"
+       },
+       "check_in_status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkInStatus: json[\"check_in_status\"],"
+       },
+       "check_out_status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOutStatus: json[\"check_out_status\"],"
+       },
+       "check_in_location": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkInLocation: json[\"check_in_location\"],"
+       },
+       "check_in_reason": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkInReason: json[\"check_in_reason\"],"
+       },
+       "check_out": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOut: json[\"check_out\"],"
+       },
+       "check_out_location": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOutLocation: json[\"check_out_location\"],"
+       },
+       "check_out_reason": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOutReason: json[\"check_out_reason\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "AttendanceReport.fromJson": {
+  "class": "AttendanceReport",
+  "file": "data/model/response_attendance_report.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "attendance_summary": {
+      "dart": "",
+      "guarded": false,
+      "src": "AttendanceSummary.fromJson(json[\"attendance_summary\"]),",
+      "class": "AttendanceSummary",
+      "fields": {
+       "working_days": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "workingDays: json[\"working_days\"],"
+       },
+       "present": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "present: json[\"present\"],"
+       },
+       "work_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "workTime: json[\"work_time\"],"
+       },
+       "absent": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "absent: json[\"absent\"],"
+       },
+       "total_on_time_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalOnTimeIn: json[\"total_on_time_in\"],"
+       },
+       "total_leave": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalLeave: json[\"total_leave\"],"
+       },
+       "total_early_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalEarlyIn: json[\"total_early_in\"],"
+       },
+       "total_late_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalLateIn: json[\"total_late_in\"],"
+       },
+       "total_left_timely": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalLeftTimely: json[\"total_left_timely\"],"
+       },
+       "total_left_early": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalLeftEarly: json[\"total_left_early\"],"
+       },
+       "total_left_later": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalLeftLater: json[\"total_left_later\"],      )"
+       }
+      }
+     },
+     "daily_report": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"daily_report\"].map((x) => DailyReport.fromJson(x))),      )",
+      "class": "DailyReport",
+      "fields": {
+       "full_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "fullDate: json[\"full_date\"],"
+       },
+       "week_day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "weekDay: json[\"week_day\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "remote_mode_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "remoteModeIn: json[\"remote_mode_in\"],"
+       },
+       "remote_mode_out": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "remoteModeOut: json[\"remote_mode_out\"],"
+       },
+       "check_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkIn: json[\"check_in\"],"
+       },
+       "check_in_status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkInStatus: json[\"check_in_status\"],"
+       },
+       "check_out_status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOutStatus: json[\"check_out_status\"],"
+       },
+       "check_in_location": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkInLocation: json[\"check_in_location\"],"
+       },
+       "check_in_reason": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkInReason: json[\"check_in_reason\"],"
+       },
+       "check_out": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOut: json[\"check_out\"],"
+       },
+       "check_out_location": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOutLocation: json[\"check_out_location\"],"
+       },
+       "check_out_reason": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOutReason: json[\"check_out_reason\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "ExpenseCategoryModel.fromJson": {
+  "class": "ExpenseCategoryModel",
+  "file": "data/model/expense_model/expense_category_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "categories": {
+      "dart": "List<Category>?",
+      "guarded": false,
+      "src": "categories: List<Category>.from(json[\"categories\"].map((x) => Category.fromJson(x))),  )",
+      "list": true,
+      "class": "Category",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "ExpenseClaimDetailsModel.fromJson": {
+  "class": "ExpenseClaimDetailsModel",
+  "file": "data/model/expense_model/expanse_claims_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "month": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "month: json[\"month\"],"
+     },
+     "total_amount": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "totalAmount: json[\"total_amount\"],"
+     },
+     "claim_data": {
+      "dart": "ClaimData?",
+      "guarded": false,
+      "src": "claimData: ClaimData.fromJson(json[\"claim_data\"]),  )",
+      "class": "ClaimData",
+      "fields": {
+       "data": {
+        "dart": "List<Datum>?",
+        "guarded": false,
+        "src": "data: List<Datum>.from(json[\"data\"].map((x) => Datum.fromJson(x))),  )",
+        "list": true,
+        "class": "Datum",
+        "fields": {
+         "id": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "id: json[\"id\"],"
+         },
+         "date": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "date: json[\"date\"],"
+         },
+         "category": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "category: json[\"category\"],"
+         },
+         "amount": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "amount: json[\"amount\"],  )"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "ExpenseClaimModel.fromJson": {
+  "class": "ExpenseClaimModel",
+  "file": "data/model/expense_model/expanse_claim_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "data": {
+      "dart": "List<Datum>?",
+      "guarded": false,
+      "src": "data: List<Datum>.from(json[\"data\"].map((x) => Datum.fromJson(x))),",
+      "list": true,
+      "class": "Datum",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "invoice_number": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "invoiceNumber: json[\"invoice_number\"],"
+       },
+       "claim_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "claimDate: json[\"claim_date\"],"
+       },
+       "remarks": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "remarks: json[\"remarks\"],"
+       },
+       "payable_amount": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "payableAmount: json[\"payable_amount\"],"
+       },
+       "due_amount": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "dueAmount: json[\"due_amount\"],"
+       },
+       "attachment_file_id": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "attachmentFileId: json[\"attachment_file_id\"],"
+       },
+       "status_id": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "statusId: json[\"status_id\"],  )"
+       }
+      }
+     },
+     "links": {
+      "dart": "Links?",
+      "guarded": false,
+      "src": "links: Links.fromJson(json[\"links\"]),",
+      "class": "Links",
+      "fields": {
+       "first": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "first: json[\"first\"],"
+       },
+       "last": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "last: json[\"last\"],"
+       },
+       "prev": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "prev: json[\"prev\"],"
+       },
+       "next": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "next: json[\"next\"],  )"
+       }
+      }
+     },
+     "pagination": {
+      "dart": "Pagination?",
+      "guarded": false,
+      "src": "pagination: Pagination.fromJson(json[\"pagination\"]),  )",
+      "class": "Pagination",
+      "fields": {
+       "total": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "total: json[\"total\"],"
+       },
+       "count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "count: json[\"count\"],"
+       },
+       "per_page": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "perPage: json[\"per_page\"],"
+       },
+       "current_page": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "currentPage: json[\"current_page\"],"
+       },
+       "total_pages": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "totalPages: json[\"total_pages\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "ExpenseListDetailsModel.fromJson": {
+  "class": "ExpenseListDetailsModel",
+  "file": "data/model/expense_model/expense_list_details_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json['result'],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json['message'],"
+   },
+   "data": {
+    "dart": "ExpenseListDetailsData?",
+    "guarded": false,
+    "src": "data: ExpenseListDetailsData.fromJson(json['data']))",
+    "class": "ExpenseListDetailsData",
+    "fields": {
+     "month": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "month: json['month'],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json['date'],"
+     },
+     "category": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "category: json['category'],"
+     },
+     "amount": {
+      "dart": "dynamic",
+      "guarded": false,
+      "src": "amount: json['amount'],"
+     },
+     "remarks": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "remarks: json['remarks'],"
+     },
+     "attachment_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "attachmentFile: json['attachment_file'])"
+     }
+    }
+   }
+  }
+ },
+ "ExpenseListModel.fromJson": {
+  "class": "ExpenseListModel",
+  "file": "data/model/expense_model/expense_list_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json['result'],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json['message'],"
+   },
+   "data": {
+    "dart": "ExpenseListDataModel?",
+    "guarded": false,
+    "src": "data: ExpenseListDataModel.fromJson(json['data']),      )",
+    "class": "ExpenseListDataModel",
+    "fields": {
+     "total_amount": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "totalAmount: json['total_amount'],"
+     },
+     "expense_list": {
+      "dart": "ExpenseList?",
+      "guarded": false,
+      "src": "expenseList: ExpenseList.fromJson(json['expense_list']))",
+      "class": "ExpenseList",
+      "fields": {
+       "data": {
+        "dart": "List<DataM>?",
+        "guarded": true,
+        "src": "dataM: json['data'] != null          ? List<DataM>.from(json['data'].map((x) => DataM.fromJson(x)))          : null,",
+        "list": true,
+        "class": "DataM",
+        "fields": {
+         "id": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "id: json['id'],"
+         },
+         "category": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "category: json['category'],"
+         },
+         "remarks": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "remarks: json['remarks'],"
+         },
+         "amount": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "amount: json['amount'],      )"
+         }
+        }
+       },
+       "pagination": {
+        "dart": "Pagination?",
+        "guarded": false,
+        "src": "pagination: Pagination.fromJson(json['pagination']))",
+        "class": "Pagination",
+        "fields": {
+         "total": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "total: json['total'],"
+         },
+         "count": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "count: json['count'],"
+         },
+         "per_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "perPage: json['per_page'],"
+         },
+         "current_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "currentPage: json['current_page'],"
+         },
+         "total_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "totalPages: json['total_page'])"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "ResponseAllLeaveRequest.fromJson": {
+  "class": "ResponseAllLeaveRequest",
+  "file": "data/model/response_all_leave_request.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "DataList?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? DataList.fromJson(json[\"data\"]) : null,      )",
+    "class": "DataList",
+    "fields": {
+     "leaveRequests": {
+      "dart": "List<RequestLeave>?",
+      "guarded": true,
+      "src": "availableLeave: json['leaveRequests'] != null            ? List<RequestLeave>.from(                json[\"leaveRequests\"].map((x) => RequestLeave.fromJson(x)),              )            : null,      )",
+      "list": true,
+      "class": "RequestLeave",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json['id'],"
+       },
+       "type": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "type: json['type'],"
+       },
+       "days": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "days: int.parse(json['days'].toString()),"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json['status'],"
+       },
+       "apply_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "applyDate: json['apply_date'],"
+       },
+       "color_code": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "colorCode: json['color_code'])"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "ResponseAttendanceStatus.fromJson": {
+  "class": "ResponseAttendanceStatus",
+  "file": "data/model/response_attendace_status.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "checkin": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "checkin: json[\"checkin\"],"
+     },
+     "checkout": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "checkout: json[\"checkout\"],"
+     },
+     "in_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "inTime: json[\"in_time\"],"
+     },
+     "out_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "outTime: json[\"out_time\"],"
+     },
+     "stay_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "stayTime: json[\"stay_time\"]  )"
+     }
+    }
+   }
+  }
+ },
+ "ResponseBaseSetting.fromJson": {
+  "class": "ResponseBaseSetting",
+  "file": "data/model/response_base_settings.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "is_hr": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "isHr: json[\"is_hr\"],"
+     },
+     "is_admin": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "isAdmin: json[\"is_admin\"],"
+     },
+     "location_service": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "locationService: json[\"location_service\"],"
+     },
+     "app_theme": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "appTheme: json[\"app_theme\"],"
+     },
+     "is_ip_enabled": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "isIpEnabled: json[\"is_ip_enabled\"],"
+     },
+     "time_wish": {
+      "dart": "TimeWish?",
+      "guarded": false,
+      "src": "timeWish: TimeWish.fromJson(json[\"time_wish\"]),",
+      "class": "TimeWish",
+      "fields": {
+       "wish": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "wish: json[\"wish\"],"
+       },
+       "sub_title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "subTitle: json[\"sub_title\"],"
+       },
+       "image": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "image: json[\"image\"],  )"
+       }
+      }
+     },
+     "barikoi_api": {
+      "dart": "BarikoiAPI?",
+      "guarded": true,
+      "src": "barikoiAPI: json[\"barikoi_api\"].toString() != '[]' ? BarikoiAPI.fromJson(json[\"barikoi_api\"]) : null,",
+      "class": "BarikoiAPI",
+      "fields": {
+       "key": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "key: json[\"key\"],"
+       },
+       "secret": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "secret: json[\"secret\"],"
+       },
+       "endpoint": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "endPoint: json[\"endpoint\"],"
+       },
+       "status_id": {
+        "dart": "int?",
+        "guarded": true,
+        "src": "statusId: int.parse(json[\"status_id\"] != null ? json[\"status_id\"].toString():'0'),  )"
+       }
+      }
+     },
+     "time_zone": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "timeZone: json[\"time_zone\"],"
+     },
+     "multi_checkin": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "multiCheckIn: json[\"multi_checkin\"],"
+     },
+     "currency_code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "currencyCode: json[\"currency_code\"],"
+     },
+     "duty_schedule": {
+      "dart": "DutySchedule?",
+      "guarded": false,
+      "src": "dutySchedule: DutySchedule.fromJson(json['duty_schedule']),",
+      "class": "DutySchedule",
+      "fields": {
+       "start_time": {
+        "dart": "Time?",
+        "guarded": false,
+        "src": "startTime: Time.fromJson(json[\"start_time\"]),",
+        "class": "Time",
+        "fields": {
+         "hour": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "hour: json[\"hour\"],"
+         },
+         "min": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "min: json[\"min\"],"
+         },
+         "sec": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "sec: json[\"sec\"],  )"
+         }
+        }
+       },
+       "end_time": {
+        "dart": "Time?",
+        "guarded": false,
+        "src": "endTime: Time.fromJson(json[\"end_time\"]),  )",
+        "class": "Time",
+        "fields": {
+         "hour": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "hour: json[\"hour\"],"
+         },
+         "min": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "min: json[\"min\"],"
+         },
+         "sec": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "sec: json[\"sec\"],  )"
+         }
+        }
+       }
+      }
+     },
+     "break_status": {
+      "dart": "BreakStatus?",
+      "guarded": false,
+      "src": "breakStatus: BreakStatus.fromJson(json[\"break_status\"]),",
+      "class": "BreakStatus",
+      "fields": {
+       "date": {
+        "dart": "DateTime?",
+        "guarded": true,
+        "src": "date: json[\"date\"] != null ? DateTime.parse(json[\"date\"]) : null,"
+       },
+       "break_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "breakTime: json[\"break_time\"],"
+       },
+       "back_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "backTime: json[\"back_time\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "diff_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "diffTime: json[\"diff_time\"])"
+       }
+      }
+     },
+     "live_tracking": {
+      "dart": "LiveTracking?",
+      "guarded": false,
+      "src": "liveTracking: LiveTracking.fromJson(json[\"live_tracking\"]),",
+      "class": "LiveTracking",
+      "fields": {
+       "app_sync_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "appSyncTime: json[\"app_sync_time\"],"
+       },
+       "live_data_store_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "liveDataStoreTime: json[\"live_data_store_time\"]  )"
+       }
+      }
+     },
+     "notification_channels": {
+      "dart": "",
+      "guarded": true,
+      "src": "notificationChannels: json[\"notification_channels\"] == null        ? []        : List<String>.from(json[\"notification_channels\"]!.map((x) => x)),  )"
+     }
+    }
+   }
+  }
+ },
+ "ResponseCheckIn.fromJson": {
+  "class": "ResponseCheckIn",
+  "file": "data/model/response_check_in.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {
+     "company_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "companyId: json[\"company_id\"],"
+     },
+     "user_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "userId: json[\"user_id\"],"
+     },
+     "remote_mode_in": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "remoteModeIn: json[\"remote_mode_in\"],"
+     },
+     "check_in": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "checkIn: DateTime.parse(json[\"check_in\"]),"
+     },
+     "in_status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "inStatus: json[\"in_status\"],"
+     },
+     "checkin_ip": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkinIp: json[\"checkin_ip\"],"
+     },
+     "late_time": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "lateTime: json[\"late_time\"],"
+     },
+     "check_in_location": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInLocation: json[\"check_in_location\"],"
+     },
+     "check_in_latitude": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInLatitude: json[\"check_in_latitude\"],"
+     },
+     "check_in_longitude": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInLongitude: json[\"check_in_longitude\"],"
+     },
+     "check_in_city": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInCity: json[\"check_in_city\"],"
+     },
+     "check_in_country_code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInCountryCode: json[\"check_in_country_code\"],"
+     },
+     "check_in_country": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInCountry: json[\"check_in_country\"],"
+     },
+     "updated_at": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "updatedAt: DateTime.parse(json[\"updated_at\"]),"
+     },
+     "created_at": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "createdAt: DateTime.parse(json[\"created_at\"]),"
+     },
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],  )"
+     }
+    }
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null          ? LaravelValidationError.formjson(json[\"error\"])          : null)"
+   }
+  }
+ },
+ "ResponseCheckOut.fromJson": {
+  "class": "ResponseCheckOut",
+  "file": "data/model/response_check_out.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "company_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "companyId: int.parse(json[\"company_id\"].toString()),"
+     },
+     "user_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "userId: json[\"user_id\"],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "check_in": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "checkIn: DateTime.parse(json[\"check_in\"]),"
+     },
+     "check_out": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "checkOut: DateTime.parse(json[\"check_out\"]),"
+     },
+     "late_reason": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "lateReason: json[\"late_reason\"],"
+     },
+     "late_time": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "lateTime: json[\"late_time\"],"
+     },
+     "in_status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "inStatus: json[\"in_status\"],"
+     },
+     "out_status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "outStatus: json[\"out_status\"],"
+     },
+     "checkin_ip": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkinIp: json[\"checkin_ip\"],"
+     },
+     "checkout_ip": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkoutIp: json[\"checkout_ip\"],"
+     },
+     "remote_mode_in": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "remoteModeIn: int.parse(json[\"remote_mode_in\"].toString()),"
+     },
+     "remote_mode_out": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "remoteModeOut: json[\"remote_mode_out\"],"
+     },
+     "check_in_location": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInLocation: json[\"check_in_location\"],"
+     },
+     "check_out_location": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkOutLocation: json[\"check_out_location\"],"
+     },
+     "check_out_latitude": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkOutLatitude: json[\"check_out_latitude\"],"
+     },
+     "check_out_longitude": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkOutLongitude: json[\"check_out_longitude\"],"
+     },
+     "check_in_city": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInCity: json[\"check_in_city\"],"
+     },
+     "check_in_country_code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInCountryCode: json[\"check_in_country_code\"],"
+     },
+     "check_in_country": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkInCountry: json[\"check_in_country\"],"
+     },
+     "check_out_city": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkOutCity: json[\"check_out_city\"],"
+     },
+     "check_out_country_code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkOutCountryCode: json[\"check_out_country_code\"],"
+     },
+     "check_out_country": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "checkOutCountry: json[\"check_out_country\"],"
+     },
+     "status_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "statusId: int.parse(json[\"status_id\"].toString()),"
+     },
+     "created_at": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "createdAt: DateTime.parse(json[\"created_at\"]),"
+     },
+     "updated_at": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "updatedAt: DateTime.parse(json[\"updated_at\"]),  )"
+     }
+    }
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null        ? LaravelValidationError.formjson(json[\"error\"])        : null)"
+   }
+  }
+ },
+ "ResponseCreateVisit.fromJson": {
+  "class": "ResponseCreateVisit",
+  "file": "data/model/response_create_visit.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {}
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "ResponseExpenseDetail.fromJson": {
+  "class": "ResponseExpenseDetail",
+  "file": "data/model/expense_model/response_expense_detail.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "category": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "category: json[\"category\"],"
+     },
+     "requested_amount": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "requestedAmount: json[\"requested_amount\"],"
+     },
+     "approved_amount": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "approvedAmount: json[\"approved_amount\"],"
+     },
+     "date_show": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "dateShow: json[\"date_show\"],"
+     },
+     "date_db": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "dateDb: json[\"date_db\"],"
+     },
+     "payment": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "payment: json[\"payment\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],"
+     },
+     "reason": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "reason: json[\"reason\"],  )"
+     }
+    }
+   }
+  }
+ },
+ "ResponseExpenseList.fromJson": {
+  "class": "ResponseExpenseList",
+  "file": "data/model/expense_model/response_expense_list.dart",
+  "fields": {
+   "data": {
+    "dart": "List<ExpenseItem>?",
+    "guarded": false,
+    "src": "data: List<ExpenseItem>.from(json[\"data\"].map((x) => ExpenseItem.fromJson(x))),",
+    "list": true,
+    "class": "ExpenseItem",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "category": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "category: json[\"category\"],"
+     },
+     "requested_amount": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "requestedAmount: json[\"requested_amount\"],"
+     },
+     "approved_amount": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "approvedAmount: json[\"approved_amount\"],"
+     },
+     "date_show": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "dateShow: json[\"date_show\"],"
+     },
+     "date_db": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "dateDb: json[\"date_db\"],"
+     },
+     "payment": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "payment: json[\"payment\"],"
+     },
+     "payment_color": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "paymentColor: json[\"payment_color\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],"
+     },
+     "status_color": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "statusColor: json[\"status_color\"],"
+     },
+     "reason": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "reason: json[\"reason\"],  )"
+     }
+    }
+   },
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "payment_type": {
+    "dart": "List<ExpanseStatus>?",
+    "guarded": false,
+    "src": "paymentType: List<ExpanseStatus>.from(json[\"payment_type\"].map((x) => ExpanseStatus.fromJson(x))),",
+    "list": true,
+    "class": "ExpanseStatus",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],  )"
+     }
+    }
+   },
+   "expanse_status": {
+    "dart": "List<ExpanseStatus>?",
+    "guarded": false,
+    "src": "expanseStatus: List<ExpanseStatus>.from(json[\"expanse_status\"].map((x) => ExpanseStatus.fromJson(x))),",
+    "list": true,
+    "class": "ExpanseStatus",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],  )"
+     }
+    }
+   },
+   "status": {
+    "dart": "int?",
+    "guarded": false,
+    "src": "status: json[\"status\"],  )"
+   }
+  }
+ },
+ "ResponseLeaveRequestDetails.fromJson": {
+  "class": "ResponseLeaveRequestDetails",
+  "file": "data/model/response_all_leave_request_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]):null,      )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],"
+     },
+     "requested_on": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "requestedOn: json[\"requested_on\"],"
+     },
+     "type": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "type: json[\"type\"],"
+     },
+     "period": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "period: json[\"period\"],"
+     },
+     "note": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "note: json[\"note\"],"
+     },
+     "total_days": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "totalDays: int.parse(json['total_days'].toString()),"
+     },
+     "substitute": {
+      "dart": "SubstituteData?",
+      "guarded": true,
+      "src": "substitute: json['substitute'] != null          ? SubstituteData.fromData(json['substitute'])          : null,"
+     },
+     "apporover": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "apporover: json[\"apporover\"],"
+     },
+     "attachment": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "attachment: json[\"attachment\"],"
+     },
+     "color_code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "colorCode: json[\"color_code\"])"
+     }
+    }
+   }
+  }
+ },
+ "appointmentDetailsModelFromJson": {
+  "class": "AppointmentDetailsModel",
+  "file": "data/model/appointment_model/appointment_details_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "title": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "title: json[\"title\"],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "day": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "day: json[\"day\"],"
+     },
+     "time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "time: json[\"time\"],"
+     },
+     "start_at": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "startAt: json[\"start_at\"],"
+     },
+     "end_at": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "endAt: json[\"end_at\"],"
+     },
+     "location": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "location: json[\"location\"],"
+     },
+     "appoinmentWith": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "appoinmentWith: json[\"appoinmentWith\"],"
+     },
+     "other_participant": {
+      "dart": "OtherParticipant?",
+      "guarded": false,
+      "src": "otherParticipant: OtherParticipant.fromJson(json[\"other_participant\"]),  )",
+      "class": "OtherParticipant",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "is_agree": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "isAgree: json[\"is_agree\"],"
+       },
+       "is_present": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "isPresent: json[\"is_present\"],"
+       },
+       "present_at": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "presentAt: json[\"present_at\"],"
+       },
+       "appoinment_started_at": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "appoinmentStartedAt: json[\"appoinment_started_at\"],"
+       },
+       "appoinment_ended_at": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "appoinmentEndedAt: json[\"appoinment_ended_at\"],"
+       },
+       "appoinment_duration": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "appoinmentDuration: json[\"appoinment_duration\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "breakReportListResponseFromJson": {
+  "class": "BreakReportListResponse",
+  "file": "data/model/report_response/break_response/break_report_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "total_break_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "totalBreakTime: json[\"total_break_time\"],"
+     },
+     "has_break": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "hasBreak: json[\"has_break\"],"
+     },
+     "break_history": {
+      "dart": "BreakHistory?",
+      "guarded": false,
+      "src": "breakHistory: BreakHistory.fromJson(json[\"break_history\"]),  )",
+      "class": "BreakHistory",
+      "fields": {
+       "today_history": {
+        "dart": "List<TodayHistory>?",
+        "guarded": false,
+        "src": "todayHistory: List<TodayHistory>.from(json[\"today_history\"].map((x) => TodayHistory.fromJson(x))),",
+        "list": true,
+        "class": "TodayHistory",
+        "fields": {
+         "name": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "name: json[\"name\"],"
+         },
+         "reason": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "reason: json[\"reason\"],"
+         },
+         "break_time_duration": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "breakTimeDuration: json[\"break_time_duration\"],"
+         },
+         "break_back_time": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "breakBackTime: json[\"break_back_time\"],  )"
+         }
+        }
+       },
+       "links": {
+        "dart": "Links?",
+        "guarded": false,
+        "src": "links: Links.fromJson(json[\"links\"]),",
+        "class": "Links",
+        "fields": {
+         "first": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "first: json[\"first\"],"
+         },
+         "last": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "last: json[\"last\"],"
+         },
+         "prev": {
+          "dart": "dynamic",
+          "guarded": false,
+          "src": "prev: json[\"prev\"],"
+         },
+         "next": {
+          "dart": "dynamic",
+          "guarded": false,
+          "src": "next: json[\"next\"],  )"
+         }
+        }
+       },
+       "pagination": {
+        "dart": "Pagination?",
+        "guarded": false,
+        "src": "pagination: Pagination.fromJson(json[\"pagination\"]),  )",
+        "class": "Pagination",
+        "fields": {
+         "total": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "total: json[\"total\"],"
+         },
+         "count": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "count: json[\"count\"],"
+         },
+         "per_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "perPage: json[\"per_page\"],"
+         },
+         "current_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "currentPage: json[\"current_page\"],"
+         },
+         "total_pages": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "totalPages: json[\"total_pages\"],  )"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "breakReportSummeryResponseFromJson": {
+  "class": "BreakReportSummeryResponse",
+  "file": "data/model/report_response/break_response/break_report_summary.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "employee_list": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"employee_list\"].map((x) => EmployeeList.fromJson(x))),      )",
+      "class": "EmployeeList",
+      "fields": {
+       "user_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "userId: json[\"user_id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "avatar_id": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatarId: json[\"avatar_id\"],"
+       },
+       "total_break_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "totalBreakTime: json[\"total_break_time\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "conferenceListResponseFromJson": {
+  "class": "ConferenceListResponse",
+  "file": "data/model/conference_model/conference_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "List<Datum>?",
+    "guarded": true,
+    "src": "data: json[\"data\"] == null ? [] : List<Datum>.from(json[\"data\"]!.map((x) => Datum.fromJson(x))),  )",
+    "list": true,
+    "class": "Datum",
+    "fields": {
+     "title": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "title: json[\"title\"],"
+     },
+     "start": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "start: json[\"start\"] == null ? null : DateTime.parse(json[\"start\"]),"
+     },
+     "end": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "end: json[\"end\"] == null ? null : DateTime.parse(json[\"end\"]),"
+     },
+     "room_id": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "roomId: json[\"room_id\"],"
+     },
+     "external_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "externalLink: json[\"external_link\"],"
+     },
+     "internal_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "internalLink: json[\"internal_link\"],"
+     },
+     "button": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "button: json[\"button\"],"
+     },
+     "time_text": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "timeText: json[\"time_text\"],"
+     },
+     "members": {
+      "dart": "List<Member>?",
+      "guarded": true,
+      "src": "members: json[\"members\"] == null ? [] : List<Member>.from(json[\"members\"]!.map((x) => Member.fromJson(x))),  )",
+      "list": true,
+      "class": "Member",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "email": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "email: json[\"email\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "dailyLeaveDetailsResponseFromJson": {
+  "class": "DailyLeaveDetailsResponse",
+  "file": "data/model/daily_leave/daily_leave_details_response.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "data": {
+      "dart": "List<Datum>?",
+      "guarded": false,
+      "src": "data: List<Datum>.from(json[\"data\"].map((x) => Datum.fromJson(x))),  )",
+      "list": true,
+      "class": "Datum",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "staff": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "staff: json[\"staff\"],"
+       },
+       "avater": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avater: json[\"avater\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "leave_type": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "leaveType: json[\"leave_type\"],"
+       },
+       "time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "time: json[\"time\"],"
+       },
+       "reason": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "reason: json[\"reason\"],"
+       },
+       "approval_details": {
+        "dart": "ApprovalDetails?",
+        "guarded": false,
+        "src": "approvalDetails: ApprovalDetails.fromJson(json[\"approval_details\"]),",
+        "class": "ApprovalDetails",
+        "fields": {
+         "manager_approval": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "managerApproval: json[\"manager_approval\"],"
+         },
+         "hr_approval": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "hrApproval: json[\"hr_approval\"],  )"
+         }
+        }
+       },
+       "tl_approval_msg": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "tlApprovalMsg: json[\"tl_approval_msg\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "dailyLeaveSingleViewResponseFromJson": {
+  "class": "DailyLeaveSingleViewResponse",
+  "file": "data/model/daily_leave/daily_leave_single_view_response.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "staff": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "staff: json[\"staff\"],"
+     },
+     "leave_type": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "leaveType: json[\"leave_type\"],"
+     },
+     "time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "time: json[\"time\"],"
+     },
+     "reason": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "reason: json[\"reason\"],"
+     },
+     "approval_details": {
+      "dart": "ApprovalDetails?",
+      "guarded": false,
+      "src": "approvalDetails: ApprovalDetails.fromJson(json[\"approval_details\"]),",
+      "class": "ApprovalDetails",
+      "fields": {
+       "manager_approval": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "managerApproval: json[\"manager_approval\"],"
+       },
+       "hr_approval": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "hrApproval: json[\"hr_approval\"],  )"
+       }
+      }
+     },
+     "tl_approval_msg": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "tlApprovalMsg: json[\"tl_approval_msg\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],  )"
+     }
+    }
+   }
+  }
+ },
+ "dailyLeaveSummaryResponseFromJson": {
+  "class": "DailyLeaveSummaryResponse",
+  "file": "data/model/daily_leave/daily_leave_summary_response.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "approved": {
+      "dart": "Approved?",
+      "guarded": false,
+      "src": "approved: Approved.fromJson(json[\"approved\"]),",
+      "class": "Approved",
+      "fields": {
+       "early_leave": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "earlyLeave: json[\"early_leave\"],"
+       },
+       "late_arrive": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "lateArrive: json[\"late_arrive\"],  )"
+       }
+      }
+     },
+     "rejected": {
+      "dart": "Approved?",
+      "guarded": false,
+      "src": "rejected: Approved.fromJson(json[\"rejected\"]),",
+      "class": "Approved",
+      "fields": {
+       "early_leave": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "earlyLeave: json[\"early_leave\"],"
+       },
+       "late_arrive": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "lateArrive: json[\"late_arrive\"],  )"
+       }
+      }
+     },
+     "pending": {
+      "dart": "Approved?",
+      "guarded": false,
+      "src": "pending: Approved.fromJson(json[\"pending\"]),  )",
+      "class": "Approved",
+      "fields": {
+       "early_leave": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "earlyLeave: json[\"early_leave\"],"
+       },
+       "late_arrive": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "lateArrive: json[\"late_arrive\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "eventHolidayModelFromJson": {
+  "class": "EventHolidayModel",
+  "file": "data/model/event_holiday_model/event_holiday_model.dart",
+  "fields": {
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),",
+    "class": "Data",
+    "fields": {
+     "items": {
+      "dart": "List<Item>?",
+      "guarded": true,
+      "src": "items: json['items'] != null            ? List<Item>.from(json[\"items\"].map((x) => Item.fromJson(x)))            : null,      )",
+      "list": true,
+      "class": "Item",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "description": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "description: json[\"description\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json['date'],"
+       },
+       "day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "day: json['day'],"
+       },
+       "start_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "startDate: json[\"start_date\"],"
+       },
+       "end_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "endDate: json[\"end_date\"],"
+       },
+       "attachment_file_id": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "attachmentFileId: json[\"attachment_file_id\"],      )"
+       }
+      }
+     }
+    }
+   },
+   "env": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "env: json[\"env\"],"
+   },
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "status": {
+    "dart": "int?",
+    "guarded": false,
+    "src": "status: json[\"status\"],      )"
+   }
+  }
+ },
+ "leaveReportDetailsResponseFromJson": {
+  "class": "LeaveReportDetailsResponse",
+  "file": "data/model/report_response/leave_response/report_leave_details_response.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "leaves": {
+      "dart": "List<Leaf>?",
+      "guarded": false,
+      "src": "leaves: List<Leaf>.from(json[\"leaves\"].map((x) => Leaf.fromJson(x))),  )",
+      "list": true,
+      "class": "Leaf",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "user_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "userId: json[\"user_id\"],"
+       },
+       "user_name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "userName: json[\"user_name\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],"
+       },
+       "user_designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "userDesignation: json[\"user_designation\"],"
+       },
+       "days": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "days: json[\"days\"],"
+       },
+       "reason": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "reason: json[\"reason\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "menuModelFromJson": {
+  "class": "MenuModel",
+  "file": "data/model/menu/menu_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "data": {
+      "dart": "List<MenuDatum>?",
+      "guarded": false,
+      "src": "data: List<MenuDatum>.from(json[\"data\"].map((x) => MenuDatum.fromJson(x))),      )",
+      "list": true,
+      "class": "MenuDatum",
+      "fields": {
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "slug": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "slug: json[\"slug\"],"
+       },
+       "position": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "position: json[\"position\"],"
+       },
+       "icon": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "icon: json[\"icon\"],      )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "notificationModelFromJson": {
+  "class": "NotificationModel",
+  "file": "data/model/notifications/notifications_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "notifications": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"notifications\"].map((x) => Notification.fromJson(x))),      )",
+      "class": "Notification",
+      "fields": {
+       "id": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "sender": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "sender: json[\"sender\"],"
+       },
+       "sender_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "senderId: json[\"sender_id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "body": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "body: json[\"body\"],"
+       },
+       "image": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "image: json[\"image\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "slag": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "slag: json[\"slag\"],"
+       },
+       "is_read": {
+        "dart": "bool?",
+        "guarded": false,
+        "src": "isRead: json[\"is_read\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "phonebookDetailsModelFromJson": {
+  "class": "PhonebookDetailsModel",
+  "file": "data/model/reponse_phonebook_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json['id'],"
+     },
+     "avatar": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "avatar: json[\"avatar\"],"
+     },
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],"
+     },
+     "designation": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "designation: json[\"designation\"],"
+     },
+     "email": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "email: json[\"email\"],"
+     },
+     "phone": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "phone: json[\"phone\"],"
+     },
+     "department": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "department: json[\"department\"],"
+     },
+     "birth_date": {
+      "dart": "dynamic",
+      "guarded": false,
+      "src": "birthDate: json[\"birth_date\"],"
+     },
+     "blood_group": {
+      "dart": "dynamic",
+      "guarded": false,
+      "src": "bloodGroup: json[\"blood_group\"],"
+     },
+     "facebook_link": {
+      "dart": "dynamic",
+      "guarded": false,
+      "src": "facebookLink: json[\"facebook_link\"],"
+     },
+     "linkedin_link": {
+      "dart": "dynamic",
+      "guarded": false,
+      "src": "linkedinLink: json[\"linkedin_link\"],"
+     },
+     "instagram_link": {
+      "dart": "dynamic",
+      "guarded": false,
+      "src": "instagramLink: json[\"instagram_link\"],"
+     },
+     "appreciates": {
+      "dart": "",
+      "guarded": true,
+      "src": "appreciates: json[\"appreciates\"] != null ? List<dynamic>.from(json[\"appreciates\"].map((x) => x)): null,  )"
+     }
+    }
+   }
+  }
+ },
+ "readNotificationFromJson": {
+  "class": "ReadNotification",
+  "file": "data/model/notifications/read_notification.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {}
+   }
+  }
+ },
+ "reportAttendanceListResponseFromJson": {
+  "class": "ReportAttendanceListResponse",
+  "file": "data/model/report_response/attendance_response/report_attendance_list_reponse.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json['data'] != null ?  Data.fromJson(json[\"data\"]) : null,  )",
+    "class": "Data",
+    "fields": {
+     "title": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "title: json[\"title\"],"
+     },
+     "users": {
+      "dart": "List<User>?",
+      "guarded": false,
+      "src": "users: List<User>.from(json[\"users\"].map((x) => User.fromJson(x))),  )",
+      "list": true,
+      "class": "User",
+      "fields": {
+       "user_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "userId: json[\"user_id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "check_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkIn: json[\"check_in\"],"
+       },
+       "check_out": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "checkOut: json[\"check_out\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "reportAttendanceRepositoryFromJson": {
+  "class": "ReportAttendanceResponse",
+  "file": "data/model/report_response/attendance_response/r_attendence_response.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "attendance_summary": {
+      "dart": "AttendanceSummary?",
+      "guarded": false,
+      "src": "attendanceSummary: AttendanceSummary.fromJson(json[\"attendance_summary\"]),  )",
+      "class": "AttendanceSummary",
+      "fields": {
+       "present": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "present: json[\"present\"],"
+       },
+       "absent": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "absent: json[\"absent\"],"
+       },
+       "on_time_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "onTimeIn: json[\"on_time_in\"],"
+       },
+       "leave": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "leave: json[\"leave\"],"
+       },
+       "early_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "earlyIn: json[\"early_in\"],"
+       },
+       "late_in": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "lateIn: json[\"late_in\"],"
+       },
+       "left_timely": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "leftTimely: json[\"left_timely\"],"
+       },
+       "left_early": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "leftEarly: json[\"left_early\"],"
+       },
+       "left_later": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "leftLater: json[\"left_later\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "reportLeaveSummeryResponseFromJson": {
+  "class": "ReportLeaveSummeryResponse",
+  "file": "data/model/report_response/leave_response/report_leave_summery_response.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "leave_types": {
+      "dart": "List<LeaveType>?",
+      "guarded": false,
+      "src": "leaveTypes: List<LeaveType>.from(json[\"leave_types\"].map((x) => LeaveType.fromJson(x))),  )",
+      "list": true,
+      "class": "LeaveType",
+      "fields": {
+       "id": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "count: json[\"count\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseAllContentsFromJson": {
+  "class": "ResponseAllContents",
+  "file": "data/model/response_all_contents.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "contents": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"contents\"].map((x) => Content.fromJson(x))),      )",
+      "class": "Content",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "company_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "companyId: json[\"company_id\"],"
+       },
+       "user_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "userId: json[\"user_id\"],"
+       },
+       "type": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "type: json[\"type\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "slug": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "slug: json[\"slug\"],"
+       },
+       "content": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "content: json[\"content\"],"
+       },
+       "meta_title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "metaTitle: json[\"meta_title\"],"
+       },
+       "meta_description": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "metaDescription: json[\"meta_description\"],"
+       },
+       "keywords": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "keywords: json[\"keywords\"],"
+       },
+       "meta_image": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "metaImage: json[\"meta_image\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "responseAllUserFromJson": {
+  "class": "ResponseAllUser",
+  "file": "data/model/response_all_user.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "users": {
+      "dart": "List<User>?",
+      "guarded": false,
+      "src": "users: List<User>.from(json[\"users\"].map((x) => User.fromJson(x))),  )",
+      "list": true,
+      "class": "User",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "phone": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "phone: json[\"phone\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseAppreciateListFromJson": {
+  "class": "ResponseAppreciateList",
+  "file": "data/model/response_appreciate_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "appreciates": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"appreciates\"].map((x) => Appreciate.fromJson(x))),      )",
+      "class": "Appreciate",
+      "fields": {
+       "appreciate_by": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "appreciateBy: json[\"appreciate_by\"],"
+       },
+       "message": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "message: json[\"message\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "day: json[\"day\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "responseApprovalDetailsFromJson": {
+  "class": "ResponseApprovalDetails",
+  "file": "data/model/response_approval_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "user_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "userId: json[\"user_id\"],"
+     },
+     "requested_on": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "requestedOn: json[\"requested_on\"],"
+     },
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],"
+     },
+     "designation": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "designation: json[\"designation\"],"
+     },
+     "department": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "department: json[\"department\"],"
+     },
+     "type": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "type: json[\"type\"],"
+     },
+     "period": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "period: json[\"period\"],"
+     },
+     "total_days": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "totalDays: json[\"total_days\"],"
+     },
+     "note": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "note: json[\"note\"],"
+     },
+     "available_leave": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "availableLeave: json[\"available_leave\"],"
+     },
+     "total_used": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "totalUsed: json[\"total_used\"],"
+     },
+     "approved_by": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "approvedBy: json[\"approved_by\"],"
+     },
+     "referred_by": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "referredBy: json[\"referred_by\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],"
+     },
+     "color_code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "colorCode: json[\"color_code\"],"
+     },
+     "substitute": {
+      "dart": "Substitute?",
+      "guarded": true,
+      "src": "substitute: json[\"substitute\"] != null            ? Substitute.fromJson(json[\"substitute\"])            : null,",
+      "class": "Substitute",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "employee_id": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "employeeId: json[\"employee_id\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],      )"
+       }
+      }
+     },
+     "apporover": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "apporover: json[\"apporover\"],"
+     },
+     "attachment": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "attachment: json[\"attachment\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseApprovalListFromJson": {
+  "class": "ResponseApprovalList",
+  "file": "data/model/response_approval_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "leaveRequests": {
+      "dart": "List<LeaveRequest>?",
+      "guarded": false,
+      "src": "leaveRequests: List<LeaveRequest>.from(json[\"leaveRequests\"].map((x) => LeaveRequest.fromJson(x))),  )",
+      "list": true,
+      "class": "LeaveRequest",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "user_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "userId: json[\"user_id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "message": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "message: json[\"message\"],"
+       },
+       "type": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "type: json[\"type\"],"
+       },
+       "days": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "days: json[\"days\"],"
+       },
+       "apply_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "applyDate: json[\"apply_date\"],"
+       },
+       "date_duration": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dateDuration: json[\"date_duration\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "color_code": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "colorCode: json[\"color_code\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseApprovalOrRejectFromJson": {
+  "class": "ResponseApprovalOrReject",
+  "file": "data/model/response_approval_or_reject.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {}
+   }
+  }
+ },
+ "responseBloodGroupFromJson": {
+  "class": "ResponseBloodGroup",
+  "file": "data/model/response_blood_group.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "blood_group": {
+      "dart": "",
+      "guarded": false,
+      "src": "bloodGroup: List<String>.from(json[\"blood_group\"].map((x) => x)),  )"
+     }
+    }
+   }
+  }
+ },
+ "responseBreakFromJson": {
+  "class": "ResponseBreak",
+  "file": "data/model/resposne_break.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "company_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "companyId: int.parse(json[\"company_id\"].toString()),"
+     },
+     "user_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "userId: int.parse(json[\"user_id\"].toString()),"
+     },
+     "date": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "date: json[\"date\"] != null ? DateTime.parse(json[\"date\"]) : null,"
+     },
+     "break_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "breakTime: json[\"break_time\"],"
+     },
+     "back_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "backTime: json[\"back_time\"],"
+     },
+     "reason": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "reason: json[\"reason\"],"
+     },
+     "updated_at": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "updatedAt: json[\"updated_at\"] != null            ? DateTime.parse(json[\"updated_at\"])            : null,"
+     },
+     "created_at": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "createdAt: json[\"created_at\"] != null            ? DateTime.parse(json[\"created_at\"])            : null,"
+     },
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseBreakHistoryFromJson": {
+  "class": "ResponseBreakHistory",
+  "file": "data/model/response_break_history.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "total_break_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "totalBreakTime: json[\"total_break_time\"],"
+     },
+     "has_break": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "hasBreak: json[\"has_break\"],"
+     },
+     "break_history": {
+      "dart": "BreakHistory?",
+      "guarded": false,
+      "src": "breakHistory: BreakHistory.fromJson(json[\"break_history\"]),  )",
+      "class": "BreakHistory",
+      "fields": {
+       "today_history": {
+        "dart": "List<TodayHistory>?",
+        "guarded": false,
+        "src": "todayHistory: List<TodayHistory>.from(json[\"today_history\"].map((x) => TodayHistory.fromJson(x))),  )",
+        "list": true,
+        "class": "TodayHistory",
+        "fields": {
+         "reason": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "reason: json[\"reason\"],"
+         },
+         "break_time_duration": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "breakTimeDuration: json[\"break_time_duration\"],"
+         },
+         "break_back_time": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "breakBackTime: json[\"break_back_time\"],  )"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseBreakReportFromJson": {
+  "class": "ResponseBreakReport",
+  "file": "data/model/response_break_report.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "total_break_time": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "totalBreakTime: json[\"total_break_time\"],"
+     },
+     "has_break": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "hasBreak: json[\"has_break\"],"
+     },
+     "break_history": {
+      "dart": "BreakHistory?",
+      "guarded": false,
+      "src": "breakHistory: BreakHistory.fromJson(json[\"break_history\"]),  )",
+      "class": "BreakHistory",
+      "fields": {
+       "today_history": {
+        "dart": "List<TodayHistory>?",
+        "guarded": false,
+        "src": "todayHistory: List<TodayHistory>.from(json[\"today_history\"].map((x) => TodayHistory.fromJson(x))),",
+        "list": true,
+        "class": "TodayHistory",
+        "fields": {
+         "name": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "name: json[\"name\"],"
+         },
+         "reason": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "reason: json[\"reason\"],"
+         },
+         "break_time_duration": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "breakTimeDuration: json[\"break_time_duration\"],"
+         },
+         "break_back_time": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "breakBackTime: json[\"break_back_time\"],  )"
+         }
+        }
+       },
+       "links": {
+        "dart": "Links?",
+        "guarded": false,
+        "src": "links: Links.fromJson(json[\"links\"]),",
+        "class": "Links",
+        "fields": {
+         "first": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "first: json[\"first\"],"
+         },
+         "last": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "last: json[\"last\"],"
+         },
+         "prev": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "prev: json[\"prev\"],"
+         },
+         "next": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "next: json[\"next\"],  )"
+         }
+        }
+       },
+       "pagination": {
+        "dart": "Pagination?",
+        "guarded": false,
+        "src": "pagination: Pagination.fromJson(json[\"pagination\"]),  )",
+        "class": "Pagination",
+        "fields": {
+         "total": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "total: json[\"total\"],"
+         },
+         "count": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "count: json[\"count\"],"
+         },
+         "per_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "perPage: json[\"per_page\"],"
+         },
+         "current_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "currentPage: json[\"current_page\"],"
+         },
+         "total_pages": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "totalPages: json[\"total_pages\"],  )"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseChangePasswordFromJson": {
+  "class": "ResponseChangePassword",
+  "file": "data/model/auth_response/response_change_passwrod.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {}
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseChangePasswordProfileFromJson": {
+  "class": "ResponseChangePasswordProfile",
+  "file": "data/model/auth_response/response_change_password_profile.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {}
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseChangeStatusFromJson": {
+  "class": "ResponseChangeStatus",
+  "file": "data/model/response_change_status.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {}
+   }
+  }
+ },
+ "responseClearNotificationFromJson": {
+  "class": "ResponseClearNotification",
+  "file": "data/model/response_clear_notification.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {}
+   }
+  }
+ },
+ "responseCreateAppreciateFromJson": {
+  "class": "ResponseCreateAppreciate",
+  "file": "data/model/response_create_appreciate.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {}
+   }
+  }
+ },
+ "responseCreateLeaveRequestFromJson": {
+  "class": "ResponseCreateLeaveRequest",
+  "file": "data/model/response_create_leave_request.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "user_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "userId: json[\"user_id\"],"
+     },
+     "assign_leave_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "assignLeaveId: json[\"assign_leave_id\"],"
+     },
+     "substitute_id": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "substituteId: json[\"substitute_id\"],"
+     },
+     "days": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "days: json[\"days\"],"
+     },
+     "reason": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "reason: json[\"reason\"],"
+     },
+     "status_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "statusId: json[\"status_id\"],"
+     },
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseCreateVisitNoteFromJson": {
+  "class": "ResponseCreateVisitNote",
+  "file": "data/model/response_create_visit_note.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {}
+   }
+  }
+ },
+ "responseDepartmentFromJson": {
+  "class": "ResponseDepartment",
+  "file": "data/model/response_department_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "departments": {
+      "dart": "List<Department>?",
+      "guarded": false,
+      "src": "departments: List<Department>.from(json[\"departments\"].map((x) => Department.fromJson(x))),  )",
+      "list": true,
+      "class": "Department",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseDesignationFromJson": {
+  "class": "ResponseDesignation",
+  "file": "data/model/response_designation_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "designations": {
+      "dart": "List<Designation>?",
+      "guarded": false,
+      "src": "designations: List<Designation>.from(json[\"designations\"].map((x) => Designation.fromJson(x))),  )",
+      "list": true,
+      "class": "Designation",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseEditEmergencyFromJson": {
+  "class": "ResponseEditEmergency",
+  "file": "data/model/response_edit_emergency.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {
+     "emergency_name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "emergencyName: json[\"emergency_name\"],"
+     },
+     "emergency_mobile_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "emergencyMobileNumber: json[\"emergency_mobile_number\"],"
+     },
+     "emergency_mobile_relationship": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "emergencyMobileRelationship: json[\"emergency_mobile_relationship\"],      )"
+     }
+    }
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseEditFinancialFromJson": {
+  "class": "ResponseEditFinancial",
+  "file": "data/model/response_edit_financial.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "tin": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "tin: json[\"tin\"],"
+     },
+     "bank_name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "bankName: json[\"bank_name\"],"
+     },
+     "bank_account": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "bankAccount: json[\"bank_account\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseEditPersonalInfoFromJson": {
+  "class": "ResponseEditPersonalInfo",
+  "file": "data/model/response_edit_personal_info.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {
+     "gender": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "gender: json[\"gender\"],"
+     },
+     "phone": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "phone: json[\"phone\"],"
+     },
+     "birth_date_db": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "birthDateDb: json[\"birth_date_db\"] != null            ? DateTime.parse(json[\"birth_date_db\"])            : null,"
+     },
+     "address": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "address: json[\"address\"],"
+     },
+     "nationality": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "nationality: json[\"nationality\"],"
+     },
+     "nid_card_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "nidCardNumber: json[\"nid_card_number\"],"
+     },
+     "nid_card_id": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "nidCardId: json[\"nid_card_id\"],"
+     },
+     "passport_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "passportNumber: json[\"passport_number\"],"
+     },
+     "passport_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "passportFile: json[\"passport_file\"],"
+     },
+     "marital_status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "maritalStatus: json[\"marital_status\"],"
+     },
+     "blood_group": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "bloodGroup: json[\"blood_group\"],"
+     },
+     "facebook_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "facebookLink: json[\"facebook_link\"],"
+     },
+     "linkedin_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "linkedinLink: json[\"linkedin_link\"],"
+     },
+     "instagram_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "instagramLink: json[\"instagram_link\"],"
+     },
+     "birth_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "birthDate: json[\"birth_date\"],      )"
+     }
+    }
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseEmergencyFromJson": {
+  "class": "ResponseEmergency",
+  "file": "data/model/response_emergency.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "emergency_name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "emergencyName: json[\"emergency_name\"],"
+     },
+     "emergency_mobile_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "emergencyMobileNumber: json[\"emergency_mobile_number\"],"
+     },
+     "emergency_mobile_relationship": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "emergencyMobileRelationship: json[\"emergency_mobile_relationship\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseEmploymentTypeFromJson": {
+  "class": "ResponseEmploymentType",
+  "file": "data/model/response_employment_type.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "types": {
+      "dart": "",
+      "guarded": false,
+      "src": "types: List<String>.from(json[\"types\"].map((x) => x)),  )"
+     }
+    }
+   }
+  }
+ },
+ "responseFinancialFromJson": {
+  "class": "ResponseFinancial",
+  "file": "data/model/response_financial.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "tin": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "tin: json[\"tin\"],"
+     },
+     "bank_name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "bankName: json[\"bank_name\"],"
+     },
+     "bank_account": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "bankAccount: json[\"bank_account\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseImageVisitFromJson": {
+  "class": "ResponseImageVisit",
+  "file": "data/model/response_image_upload_visit.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "data: json[\"data\"],"
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null          ? LaravelValidationError.formjson(json[\"error\"])          : null  )"
+   }
+  }
+ },
+ "responseLeaveSummaryFromJson": {
+  "class": "ResponseLeaveSummary",
+  "file": "data/model/response_leave_summary.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "total_leave": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "totalLeave: json[\"total_leave\"],"
+     },
+     "total_used": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "totalUsed: json[\"total_used\"],"
+     },
+     "leave_balance": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "leaveBalance: json[\"leave_balance\"],"
+     },
+     "available_leave": {
+      "dart": "List<AvailableLeave>?",
+      "guarded": false,
+      "src": "availableLeave: List<AvailableLeave>.from(json[\"available_leave\"].map((x) => AvailableLeave.fromJson(x))),  )",
+      "list": true,
+      "class": "AvailableLeave",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "type": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "type: json[\"type\"],"
+       },
+       "total_leave": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "totalLeave: int.parse(json[\"total_leave\"].toString()) ,"
+       },
+       "left_days": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "leftDays: json[\"left_days\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseLeaveTypeFromJson": {
+  "class": "ResponseLeaveType",
+  "file": "data/model/response_leave_type.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "available_leave": {
+      "dart": "List<AvailableLeave>?",
+      "guarded": false,
+      "src": "availableLeave: List<AvailableLeave>.from(json[\"available_leave\"].map((x) => AvailableLeave.fromJson(x))),  )",
+      "list": true,
+      "class": "AvailableLeave",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "type": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "type: json[\"type\"],"
+       },
+       "total_leave": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "totalLeave: int.parse(json[\"total_leave\"].toString()),"
+       },
+       "left_days": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "leftDays: json[\"left_days\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseLocationFromJson": {
+  "class": "ResponseLocation",
+  "file": "data/model/response_location.dart",
+  "fields": {
+   "place": {
+    "dart": "Place?",
+    "guarded": true,
+    "src": "place: json[\"place\"] != null ? Place.fromJson(json[\"place\"]) : null,",
+    "class": "Place",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "distance_within_meters": {
+      "dart": "double?",
+      "guarded": false,
+      "src": "distanceWithinMeters: json[\"distance_within_meters\"].toDouble(),"
+     },
+     "address": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "address: json[\"address\"],"
+     },
+     "area": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "area: json[\"area\"],"
+     },
+     "city": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "city: json[\"city\"],"
+     },
+     "postCode": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "postCode: json[\"postCode\"],"
+     },
+     "location_type": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "locationType: json[\"location_type\"],"
+     },
+     "district": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "district: json[\"district\"],"
+     },
+     "country": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "country: json[\"country\"],"
+     },
+     "sub_district": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "subDistrict: json[\"sub_district\"],"
+     },
+     "union": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "union: json[\"union\"],"
+     },
+     "pauroshova": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "pauroshova: json[\"pauroshova\"],"
+     },
+     "division": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "division: json[\"division\"],"
+     },
+     "address_components": {
+      "dart": "AddressComponents?",
+      "guarded": false,
+      "src": "addressComponents: AddressComponents.fromJson(json[\"address_components\"]),",
+      "class": "AddressComponents",
+      "fields": {
+       "place_name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "placeName: json[\"place_name\"],"
+       },
+       "house": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "house: json[\"house\"],"
+       },
+       "road": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "road: json[\"road\"],  )"
+       }
+      }
+     },
+     "area_components": {
+      "dart": "AreaComponents?",
+      "guarded": false,
+      "src": "areaComponents: AreaComponents.fromJson(json[\"area_components\"]),  )",
+      "class": "AreaComponents",
+      "fields": {
+       "area": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "area: json[\"area\"],"
+       },
+       "sub_area": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "subArea: json[\"sub_area\"],  )"
+       }
+      }
+     }
+    }
+   },
+   "status": {
+    "dart": "int?",
+    "guarded": false,
+    "src": "status: json[\"status\"],  )"
+   }
+  }
+ },
+ "responseLoginFromJson": {
+  "class": "ResponseLogin",
+  "file": "data/model/auth_response/response_login.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "UserModel?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? UserModel.fromJson(json[\"data\"]) : null,",
+    "class": "UserModel",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "company_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "companyId: int.parse(json[\"company_id\"].toString()),"
+     },
+     "is_admin": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "isAdmin: json[\"is_admin\"],"
+     },
+     "is_hr": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "isHr: json[\"is_hr\"],"
+     },
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],"
+     },
+     "email": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "email: json[\"email\"],"
+     },
+     "phone": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "phone: json[\"phone\"],"
+     },
+     "avatar": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "avatar: json[\"avatar\"],"
+     },
+     "token": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "token: json[\"token\"],  )"
+     }
+    }
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null          ? LaravelValidationError.formjson(json[\"error\"])          : null)"
+   }
+  }
+ },
+ "responseManagerListFromJson": {
+  "class": "ResponseManagerList",
+  "file": "data/model/response_manager_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "managers": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"managers\"].map((x) => Manager.fromJson(x))),      )",
+      "class": "Manager",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "responseMeetingDetailsFromJson": {
+  "class": "ResponseMeetingDetails",
+  "file": "data/model/response_meeting_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "title": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "title: json[\"title\"],"
+     },
+     "description": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "description: json[\"description\"],"
+     },
+     "location": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "location: json[\"location\"],"
+     },
+     "meeting_at": {
+      "dart": "DateTime?",
+      "guarded": false,
+      "src": "meetingAt: DateTime.parse(json[\"meeting_at\"]),"
+     },
+     "duration": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "duration: json[\"duration\"],"
+     },
+     "start_at": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "startAt: json[\"start_at\"],"
+     },
+     "end_at": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "endAt: json[\"end_at\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],"
+     },
+     "color": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "color: json[\"color\"],"
+     },
+     "attachment_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "attachmentFile: json[\"attachment_file\"],  )"
+     }
+    }
+   }
+  }
+ },
+ "responseMeetingListFromJson": {
+  "class": "ResponseMeetingList",
+  "file": "data/model/response_meeting_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "items": {
+      "dart": "List<Item>?",
+      "guarded": false,
+      "src": "items: List<Item>.from(json[\"items\"].map((x) => Item.fromJson(x))),      )",
+      "list": true,
+      "class": "Item",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "day: json[\"day\"],"
+       },
+       "time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "time: json[\"time\"],"
+       },
+       "start_at": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "startAt: json[\"start_at\"],"
+       },
+       "end_at": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "endAt: json[\"end_at\"],"
+       },
+       "location": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "location: json[\"location\"],"
+       },
+       "duration": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "duration: json[\"duration\"],"
+       },
+       "participants": {
+        "dart": "",
+        "guarded": false,
+        "src": "json[\"participants\"].map((x) => Participant.fromJson(x))),",
+        "class": "Participant",
+        "fields": {
+         "name": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "name: json[\"name\"],"
+         },
+         "is_agree": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "isAgree: json[\"is_agree\"],"
+         },
+         "is_present": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "isPresent: json[\"is_present\"],"
+         },
+         "present_at": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "presentAt: json[\"present_at\"],      )"
+         }
+        },
+        "list": true
+       },
+       "appoinmentWith": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "appointmentWith: json[\"appoinmentWith\"],      )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseNoticeCreateFromJson": {
+  "class": "ResponseNoticeCreate",
+  "file": "data/model/response_notice_create.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "int?",
+    "guarded": false,
+    "src": "data: json[\"data\"],  )"
+   }
+  }
+ },
+ "responseNoticeDetailsFromJson": {
+  "class": "ResponseNoticeDetails",
+  "file": "data/model/response_notice_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "subject": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "subject: json[\"subject\"],"
+     },
+     "description": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "description: json[\"description\"],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "file: json[\"file\"],  )"
+     }
+    }
+   }
+  }
+ },
+ "responseNoticeListFromJson": {
+  "class": "ResponseNoticeList",
+  "file": "data/model/response_notice_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "notices": {
+      "dart": "Notices?",
+      "guarded": false,
+      "src": "notices: Notices.fromJson(json[\"notices\"]),  )",
+      "class": "Notices",
+      "fields": {
+       "data": {
+        "dart": "List<NoticeList>?",
+        "guarded": false,
+        "src": "data: List<NoticeList>.from(json[\"data\"].map((x) => NoticeList.fromJson(x))),  )",
+        "list": true,
+        "class": "NoticeList",
+        "fields": {
+         "id": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "id: json[\"id\"],"
+         },
+         "subject": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "subject: json[\"subject\"],"
+         },
+         "description": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "description: json[\"description\"],"
+         },
+         "date": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "date: json[\"date\"],"
+         },
+         "file": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "file: json[\"file\"],  )"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseOfficialInfoFromJson": {
+  "class": "ResponseOfficialInfo",
+  "file": "data/model/response_offical_info.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],"
+     },
+     "email": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "email: json[\"email\"],"
+     },
+     "avatar": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "avatar: json[\"avatar\"],"
+     },
+     "department_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "departmentId: json[\"department_id\"],"
+     },
+     "department": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "department: json[\"department\"],"
+     },
+     "designation_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "designationId: json[\"designation_id\"],"
+     },
+     "designation": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "designation: json[\"designation\"],"
+     },
+     "employee_type": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "employeeType: json[\"employee_type\"],"
+     },
+     "employee_id": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "employeeId: json[\"employee_id\"],"
+     },
+     "manager_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "managerId: json[\"manager_id\"],"
+     },
+     "manager": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "manager: json[\"manager\"],"
+     },
+     "grade": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "grade: json[\"grade\"],"
+     },
+     "joining_date_db": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "joiningDateDb: json[\"joining_date_db\"] != null            ? DateTime.parse(json[\"joining_date_db\"])            : null,"
+     },
+     "joining_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "joiningDate: json[\"joining_date\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responsePayrollFromJson": {
+  "class": "ResponsePayroll",
+  "file": "data/model/payroll/response_payroll.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "List<PayrollList>?",
+    "guarded": true,
+    "src": "data: json[\"data\"] == null ? [] : List<PayrollList>.from(json[\"data\"]!.map((x) => PayrollList.fromJson(x))),  )",
+    "list": true,
+    "class": "PayrollList",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "month": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "month: json[\"month\"],"
+     },
+     "is_calculated": {
+      "dart": "bool?",
+      "guarded": false,
+      "src": "isCalculated: json[\"is_calculated\"],"
+     },
+     "salary": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "salary: json[\"salary\"],"
+     },
+     "payslip_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "payslipLink: json[\"payslip_link\"],  )"
+     }
+    }
+   }
+  }
+ },
+ "responsePersonalFromJson": {
+  "class": "ResponsePersonal",
+  "file": "data/model/response_personal.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,      )",
+    "class": "Data",
+    "fields": {
+     "gender": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "gender: json[\"gender\"],"
+     },
+     "phone": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "phone: json[\"phone\"],"
+     },
+     "birth_date_db": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "birthDateDb: json[\"birth_date_db\"] != null        ? DateTime.parse(json[\"birth_date_db\"])        : null,"
+     },
+     "birth_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "birthDate: json[\"birth_date\"],"
+     },
+     "address": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "address: json[\"address\"],"
+     },
+     "nationality": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "nationality: json[\"nationality\"],"
+     },
+     "nid_card_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "nidCardNumber: json[\"nid_card_number\"],"
+     },
+     "nid_card_id": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "nidCardId: json[\"nid_card_id\"],"
+     },
+     "marital_status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "maritalStatus: json[\"marital_status\"],"
+     },
+     "blood_group": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "bloodGroup: json[\"blood_group\"],"
+     },
+     "facebook_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "facebookLink: json[\"facebook_link\"],"
+     },
+     "linkedin_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "linkedinLink: json[\"linkedin_link\"],"
+     },
+     "instagram_link": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "instagramLink: json[\"instagram_link\"],"
+     },
+     "passport_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "passportNumber: json[\"passport_number\"],"
+     },
+     "passport_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "passportFile: json[\"passport_file\"],"
+     },
+     "passport_expire_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "passportExpireDate: json[\"passport_expire_date\"],"
+     },
+     "eid_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "eIDNumber: json[\"eid_number\"],"
+     },
+     "eid_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "eIDFile: json[\"eid_file\"],"
+     },
+     "eid_expire_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "eIDExpireDate: json[\"eid_expire_date\"],"
+     },
+     "visa_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "visaNumber: json[\"visa_number\"],"
+     },
+     "visa_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "visaFile: json[\"visa_file\"],"
+     },
+     "visa_expire_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "visaExpireDate: json[\"visa_expire_date\"],"
+     },
+     "insurance_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "insuranceNumber: json[\"insurance_number\"],"
+     },
+     "insurance_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "insuranceFile: json[\"insurance_file\"],"
+     },
+     "insurance_expire_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "insuranceExpireDate: json[\"insurance_expire_date\"],"
+     },
+     "labour_card_number": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "labourNumber: json[\"labour_card_number\"],"
+     },
+     "labour_card_file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "labourFile: json[\"labour_card_file\"],"
+     },
+     "labour_card_expire_date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "labourExpireDate: json[\"labour_card_expire_date\"],  )"
+     }
+    }
+   }
+  }
+ },
+ "responseProfileImageFromJson": {
+  "class": "ResponseProfileImage",
+  "file": "data/model/response_profile_image.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "avatar": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "avatar: json[\"avatar\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseSupportCreateFromJson": {
+  "class": "ResponseSupportCreate",
+  "file": "data/model/response_support_create.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {}
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseSupportDetailsFromJson": {
+  "class": "ResponseSupportDetails",
+  "file": "data/model/response_support_details.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "code": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "code: json[\"code\"],"
+     },
+     "subject": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "subject: json[\"subject\"],"
+     },
+     "description": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "description: json[\"description\"],"
+     },
+     "type_name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "typeName: json[\"type_name\"],"
+     },
+     "type_color": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "typeColor: json[\"type_color\"],"
+     },
+     "priority_name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "priorityName: json[\"priority_name\"],"
+     },
+     "priority_color": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "priorityColor: json[\"priority_color\"],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "file": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "file: json[\"file\"],      )"
+     }
+    }
+   }
+  }
+ },
+ "responseSupportTicketListFromJson": {
+  "class": "ResponseSupportTicketList",
+  "file": "data/model/response_support_ticket_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "data": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"data\"].map((x) => SupportList.fromJson(x))),      )",
+      "class": "SupportList",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "subject": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "subject: json[\"subject\"],"
+       },
+       "file": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "file: json[\"file\"],"
+       },
+       "type_name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "typeName: json[\"type_name\"],"
+       },
+       "type_color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "typeColor: json[\"type_color\"],"
+       },
+       "priority_name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "priorityName: json[\"priority_name\"],"
+       },
+       "priority_color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "priorityColor: json[\"priority_color\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "responseUpdateOfficalInfoFromJson": {
+  "class": "ResponseUpdateOfficalInfo",
+  "file": "data/model/response_update_official_info.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {
+     "name": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "name: json[\"name\"],"
+     },
+     "email": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "email: json[\"email\"],"
+     },
+     "department_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "departmentId: json[\"department_id\"],"
+     },
+     "department": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "department: json[\"department\"],"
+     },
+     "designation_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "designationId: json[\"designation_id\"],"
+     },
+     "designation": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "designation: json[\"designation\"],"
+     },
+     "joining_date_db": {
+      "dart": "DateTime?",
+      "guarded": true,
+      "src": "joiningDateDb: json[\"joining_date_db\"] != null            ? DateTime.parse(json[\"joining_date_db\"])            : null,"
+     },
+     "employee_type": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "employeeType: json[\"employee_type\"],"
+     },
+     "employee_id": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "employeeId: json[\"employee_id\"],"
+     },
+     "manager_id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "managerId: json[\"manager_id\"],"
+     },
+     "manager": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "manager: json[\"manager\"],"
+     },
+     "grade": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "grade: json[\"grade\"],      )"
+     }
+    }
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseUserSearchFromJson": {
+  "class": "ResponseUserSearch",
+  "file": "data/model/response_user_search.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "users": {
+      "dart": "List<User>?",
+      "guarded": false,
+      "src": "users: List<User>.from(json[\"users\"].map((x) => User.fromJson(x))),  )",
+      "list": true,
+      "class": "User",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "phone": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "phone: json[\"phone\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "responseVerificationCodeFromJson": {
+  "class": "ResponseVerificationCode",
+  "file": "data/model/auth_response/response_verification_code.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] != null ? Data.fromJson(json[\"data\"]) : null,",
+    "class": "Data",
+    "fields": {}
+   },
+   "error": {
+    "dart": "LaravelValidationError?",
+    "guarded": true,
+    "src": "laravelValidationError: json[\"error\"] != null              ? LaravelValidationError.formjson(json[\"error\"])              : null)"
+   }
+  }
+ },
+ "responseVisitDetailsFromJson": {
+  "class": "ResponseVisitDetails",
+  "file": "data/model/response_visit_details.dart",
+  "fields": {
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),",
+    "class": "Data",
+    "fields": {
+     "id": {
+      "dart": "int?",
+      "guarded": false,
+      "src": "id: json[\"id\"],"
+     },
+     "title": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "title: json[\"title\"],"
+     },
+     "date": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "date: json[\"date\"],"
+     },
+     "description": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "description: json[\"description\"],"
+     },
+     "status": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "status: json[\"status\"],"
+     },
+     "status_color": {
+      "dart": "String?",
+      "guarded": false,
+      "src": "statusColor: json[\"status_color\"],"
+     },
+     "images": {
+      "dart": "List<ImageListVisit>?",
+      "guarded": false,
+      "src": "imageListVisit: List<ImageListVisit>.from(json[\"images\"].map((x) => ImageListVisit.fromJson(x))),",
+      "list": true,
+      "class": "ImageListVisit",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "file_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "fileId: json[\"file_id\"],"
+       },
+       "file_path": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "filePath: json[\"file_path\"],      )"
+       }
+      }
+     },
+     "notes": {
+      "dart": "List<Note>?",
+      "guarded": false,
+      "src": "notes: List<Note>.from(json[\"notes\"].map((x) => Note.fromJson(x))),",
+      "list": true,
+      "class": "Note",
+      "fields": {
+       "note": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "note: json[\"note\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "status_color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "statusColor: json[\"status_color\"],"
+       },
+       "date_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dateTime: json[\"date_time\"],      )"
+       }
+      }
+     },
+     "schedules": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"schedules\"].map((x) => Schedule.fromJson(x))),",
+      "class": "Schedule",
+      "fields": {
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "latitude": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "latitude: json[\"latitude\"],"
+       },
+       "longitude": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "longitude: json[\"longitude\"],"
+       },
+       "note": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "note: json[\"note\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "status_color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "statusColor: json[\"status_color\"],"
+       },
+       "date_time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dateTime: json[\"date_time\"],      )"
+       }
+      },
+      "list": true
+     },
+     "next_status": {
+      "dart": "NextStatus?",
+      "guarded": false,
+      "src": "nextStatus: NextStatus.fromJson(json[\"next_status\"]),      )",
+      "class": "NextStatus",
+      "fields": {
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "status_text": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "statusText: json[\"status_text\"],      )"
+       }
+      }
+     }
+    }
+   },
+   "env": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "env: json[\"env\"],"
+   },
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "status": {
+    "dart": "int?",
+    "guarded": false,
+    "src": "status: json[\"status\"],      )"
+   }
+  }
+ },
+ "responseVisitHistoryFromJson": {
+  "class": "ResponseVisitHistory",
+  "file": "data/model/response_visit_history.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "history": {
+      "dart": "",
+      "guarded": false,
+      "src": "List<History>.from(json[\"history\"]. map((x) => History.fromJson(x))),      )",
+      "class": "History",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "year": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "year: json[\"year\"],"
+       },
+       "month": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "month: json[\"month\"],"
+       },
+       "day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "day: json[\"day\"],"
+       },
+       "started": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "started: json[\"started\"],"
+       },
+       "reached": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "reached: json[\"reached\"],"
+       },
+       "duration": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "duration: json[\"duration\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "status_color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "statusColor: json[\"status_color\"],      )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "responseVisitListFromJson": {
+  "class": "ResponseVisitList",
+  "file": "data/model/response_visit_list.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "my_visits": {
+      "dart": "List<MyVisit>?",
+      "guarded": false,
+      "src": "myVisits: List<MyVisit>.from(json[\"my_visits\"].map((x) => MyVisit.fromJson(x))),  )",
+      "list": true,
+      "class": "MyVisit",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "status_color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "statusColor: json[\"status_color\"],  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "staticsModelFromJson": {
+  "class": "StaticsModel",
+  "file": "data/model/home/statics_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "today": {
+      "dart": "List<Today>?",
+      "guarded": false,
+      "src": "today: List<Today>.from(json[\"today\"].map((x) => Today.fromJson(x))),",
+      "list": true,
+      "class": "Today",
+      "fields": {
+       "image": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "image: json[\"image\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "number": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "number: json[\"number\"],"
+       },
+       "slug": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "slug: json[\"slug\"])"
+       }
+      }
+     },
+     "current_month": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"current_month\"].map((x) => CurrentMonth.fromJson(x))),      )",
+      "class": "CurrentMonth",
+      "fields": {
+       "image": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "image: json[\"image\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "number": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "number: json[\"number\"],"
+       },
+       "slug": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "slug: json[\"slug\"])"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "taskDashboardModelFromJson": {
+  "class": "TaskDashboardModel",
+  "file": "data/model/task/task_dashboard_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "staticstics": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"staticstics\"].map((x) => Staticstic.fromJson(x))),",
+      "class": "Staticstic",
+      "fields": {
+       "count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "count: json[\"count\"],"
+       },
+       "text": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "text: json[\"text\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "image": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "image: json[\"image\"],  )"
+       }
+      },
+      "list": true
+     },
+     "tasks_in_collection": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"tasks_in_collection\"].map((x) => Collection.fromJson(x))),",
+      "class": "Collection",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "date_range": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dateRange: json[\"date_range\"],"
+       },
+       "start_date": {
+        "dart": "DateTime?",
+        "guarded": false,
+        "src": "startDate: DateTime.parse(json[\"start_date\"]),"
+       },
+       "end_date": {
+        "dart": "DateTime?",
+        "guarded": false,
+        "src": "endDate: DateTime.parse(json[\"end_date\"]),"
+       },
+       "users_count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "usersCount: json[\"users_count\"],"
+       },
+       "members": {
+        "dart": "List<Members>?",
+        "guarded": false,
+        "src": "members: List<Members>.from(json[\"members\"].map((x) => Members.fromJson(x))),",
+        "list": true,
+        "class": "Members",
+        "fields": {
+         "id": {
+          "dart": "",
+          "guarded": false,
+          "src": "id: json[\"id\"],"
+         },
+         "name": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "name: json[\"name\"],"
+         },
+         "phone": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "phone: json[\"phone\"],"
+         },
+         "email": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "email: json[\"email\"],"
+         },
+         "avatar": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "avatar: json[\"avatar\"],"
+         },
+         "department": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "department: json[\"department\"],"
+         },
+         "designation": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "designation: json[\"designation\"],  )"
+         }
+        }
+       },
+       "color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "color: json[\"color\"],  )"
+       }
+      },
+      "list": true
+     },
+     "complete_tasks_collection": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"complete_tasks_collection\"]            .map((x) => Collection.fromJson(x))),  )",
+      "class": "Collection",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "date_range": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dateRange: json[\"date_range\"],"
+       },
+       "start_date": {
+        "dart": "DateTime?",
+        "guarded": false,
+        "src": "startDate: DateTime.parse(json[\"start_date\"]),"
+       },
+       "end_date": {
+        "dart": "DateTime?",
+        "guarded": false,
+        "src": "endDate: DateTime.parse(json[\"end_date\"]),"
+       },
+       "users_count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "usersCount: json[\"users_count\"],"
+       },
+       "members": {
+        "dart": "List<Members>?",
+        "guarded": false,
+        "src": "members: List<Members>.from(json[\"members\"].map((x) => Members.fromJson(x))),",
+        "list": true,
+        "class": "Members",
+        "fields": {
+         "id": {
+          "dart": "",
+          "guarded": false,
+          "src": "id: json[\"id\"],"
+         },
+         "name": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "name: json[\"name\"],"
+         },
+         "phone": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "phone: json[\"phone\"],"
+         },
+         "email": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "email: json[\"email\"],"
+         },
+         "avatar": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "avatar: json[\"avatar\"],"
+         },
+         "department": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "department: json[\"department\"],"
+         },
+         "designation": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "designation: json[\"designation\"],  )"
+         }
+        }
+       },
+       "color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "color: json[\"color\"],  )"
+       }
+      },
+      "list": true
+     }
+    }
+   }
+  }
+ },
+ "taskDetailsModelFromJson": {
+  "class": "TaskDetailsModel",
+  "file": "data/model/task/task_details_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": true,
+    "src": "data: json[\"data\"] == null ? null : Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "members": {
+      "dart": "List<Member>?",
+      "guarded": true,
+      "src": "members: json[\"members\"] == null ? [] : List<Member>.from(json[\"members\"]!.map((x) => Member.fromJson(x))),",
+      "list": true,
+      "class": "Member",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "name": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "name: json[\"name\"],"
+       },
+       "phone": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "phone: json[\"phone\"],"
+       },
+       "email": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "email: json[\"email\"],"
+       },
+       "designation": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "designation: json[\"designation\"],"
+       },
+       "department": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "department: json[\"department\"],"
+       },
+       "avatar": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "avatar: json[\"avatar\"],  )"
+       }
+      }
+     },
+     "priorities": {
+      "dart": "List<Priority>?",
+      "guarded": true,
+      "src": "priorities: json[\"priorities\"] == null ? [] : List<Priority>.from(json[\"priorities\"]!.map((x) => Priority.fromJson(x))),",
+      "list": true,
+      "class": "Priority",
+      "fields": {
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],  )"
+       }
+      }
+     },
+     "task_details": {
+      "dart": "TaskDetails?",
+      "guarded": true,
+      "src": "taskDetails: json[\"task_details\"] == null ? null : TaskDetails.fromJson(json[\"task_details\"]),  )",
+      "class": "TaskDetails",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "db_start_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dbStartDate: json[\"db_start_date\"],"
+       },
+       "start_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "startDate: json[\"start_date\"],"
+       },
+       "db_end_date": {
+        "dart": "DateTime?",
+        "guarded": true,
+        "src": "dbEndDate: json[\"db_end_date\"] == null ? null : DateTime.parse(json[\"db_end_date\"]),"
+       },
+       "end_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "endDate: json[\"end_date\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "supervisor": {
+        "dart": "dynamic",
+        "guarded": false,
+        "src": "supervisor: json[\"supervisor\"],"
+       },
+       "users_count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "usersCount: json[\"users_count\"],"
+       },
+       "actual_count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "actualCount: json[\"actual_count\"],"
+       },
+       "discussions_count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "discussionsCount: json[\"discussions_count\"],"
+       },
+       "files_count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "filesCount: json[\"files_count\"],"
+       },
+       "progress": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "progress: json[\"progress\"],"
+       },
+       "is_completed": {
+        "dart": "bool?",
+        "guarded": false,
+        "src": "isCompleted: json[\"is_completed\"],"
+       },
+       "priority_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "priorityId: json[\"priority_id\"],"
+       },
+       "priority": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "priority: json[\"priority\"],"
+       },
+       "status_id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "statusId: json[\"status_id\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "color: json[\"color\"],"
+       },
+       "description": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "description: json[\"description\"],"
+       },
+       "files": {
+        "dart": "",
+        "guarded": true,
+        "src": "files: json[\"files\"] == null ? [] : List<dynamic>.from(json[\"files\"]!.map((x) => x)),"
+       },
+       "discussion": {
+        "dart": "",
+        "guarded": true,
+        "src": "discussion: json[\"discussion\"] == null ? [] : List<dynamic>.from(json[\"discussion\"]!.map((x) => x)),  )"
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "taskListModelFromJson": {
+  "class": "TaskListModel",
+  "file": "data/model/task/task_list_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),  )",
+    "class": "Data",
+    "fields": {
+     "priorities": {
+      "dart": "",
+      "guarded": false,
+      "src": "json[\"priorities\"].map((x) => Priority.fromJson(x))),",
+      "class": "Priority",
+      "fields": {
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "count": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "count: json[\"count\"],"
+       },
+       "color": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "color: json[\"color\"],  )"
+       }
+      },
+      "list": true
+     },
+     "task_list_collection": {
+      "dart": "",
+      "guarded": false,
+      "src": "TaskListCollection.fromJson(json[\"task_list_collection\"]),  )",
+      "class": "TaskListCollection",
+      "fields": {
+       "tasks": {
+        "dart": "List<Collection>?",
+        "guarded": false,
+        "src": "tasks: List<Collection>.from(json[\"tasks\"].map((x) => Collection.fromJson(x))),",
+        "list": true,
+        "class": "Collection",
+        "fields": {
+         "id": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "id: json[\"id\"],"
+         },
+         "title": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "title: json[\"title\"],"
+         },
+         "date_range": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "dateRange: json[\"date_range\"],"
+         },
+         "start_date": {
+          "dart": "DateTime?",
+          "guarded": false,
+          "src": "startDate: DateTime.parse(json[\"start_date\"]),"
+         },
+         "end_date": {
+          "dart": "DateTime?",
+          "guarded": false,
+          "src": "endDate: DateTime.parse(json[\"end_date\"]),"
+         },
+         "users_count": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "usersCount: json[\"users_count\"],"
+         },
+         "members": {
+          "dart": "List<Members>?",
+          "guarded": false,
+          "src": "members: List<Members>.from(json[\"members\"].map((x) => Members.fromJson(x))),",
+          "list": true,
+          "class": "Members",
+          "fields": {
+           "id": {
+            "dart": "",
+            "guarded": false,
+            "src": "id: json[\"id\"],"
+           },
+           "name": {
+            "dart": "String?",
+            "guarded": false,
+            "src": "name: json[\"name\"],"
+           },
+           "phone": {
+            "dart": "String?",
+            "guarded": false,
+            "src": "phone: json[\"phone\"],"
+           },
+           "email": {
+            "dart": "String?",
+            "guarded": false,
+            "src": "email: json[\"email\"],"
+           },
+           "avatar": {
+            "dart": "String?",
+            "guarded": false,
+            "src": "avatar: json[\"avatar\"],"
+           },
+           "department": {
+            "dart": "String?",
+            "guarded": false,
+            "src": "department: json[\"department\"],"
+           },
+           "designation": {
+            "dart": "String?",
+            "guarded": false,
+            "src": "designation: json[\"designation\"],  )"
+           }
+          }
+         },
+         "color": {
+          "dart": "String?",
+          "guarded": false,
+          "src": "color: json[\"color\"],  )"
+         }
+        }
+       },
+       "pagination": {
+        "dart": "Pagination?",
+        "guarded": false,
+        "src": "pagination: Pagination.fromJson(json[\"pagination\"]),      )",
+        "class": "Pagination",
+        "fields": {
+         "total": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "total: json[\"total\"],"
+         },
+         "count": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "count: json[\"count\"],"
+         },
+         "per_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "perPage: json[\"per_page\"],"
+         },
+         "current_page": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "currentPage: json[\"current_page\"],"
+         },
+         "total_pages": {
+          "dart": "int?",
+          "guarded": false,
+          "src": "totalPages: json[\"total_pages\"],  )"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ },
+ "upcomingModelFromJson": {
+  "class": "UpcomingModel",
+  "file": "data/model/home/upcoming_appointments_model.dart",
+  "fields": {
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),",
+    "class": "Data",
+    "fields": {
+     "items": {
+      "dart": "List<Item>?",
+      "guarded": false,
+      "src": "items: List<Item>.from(json[\"items\"].map((x) => Item.fromJson(x))),      )",
+      "list": true,
+      "class": "Item",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "title": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "title: json[\"title\"],"
+       },
+       "date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "date: json[\"date\"],"
+       },
+       "day": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "day: json[\"day\"],"
+       },
+       "time": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "time: json[\"time\"],"
+       },
+       "location": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "location: json[\"location\"],"
+       },
+       "participant": {
+        "dart": "",
+        "guarded": false,
+        "src": "participant: List<dynamic>.from(json[\"participant\"].map((x) => x)),      )"
+       }
+      }
+     }
+    }
+   },
+   "env": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "env: json[\"env\"],"
+   },
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "status": {
+    "dart": "int?",
+    "guarded": false,
+    "src": "status: json[\"status\"],      )"
+   }
+  }
+ },
+ "PaymentHistoryModel.fromJson": {
+  "class": "PaymentHistoryModel",
+  "file": "data/model/expense_model/payment_history_model.dart",
+  "fields": {
+   "result": {
+    "dart": "bool?",
+    "guarded": false,
+    "src": "result: json[\"result\"],"
+   },
+   "message": {
+    "dart": "String?",
+    "guarded": false,
+    "src": "message: json[\"message\"],"
+   },
+   "data": {
+    "dart": "Data?",
+    "guarded": false,
+    "src": "data: Data.fromJson(json[\"data\"]),      )",
+    "class": "Data",
+    "fields": {
+     "data": {
+      "dart": "List<Datum>?",
+      "guarded": false,
+      "src": "data: List<Datum>.from(json[\"data\"].map((x) => Datum.fromJson(x))),      )",
+      "list": true,
+      "class": "Datum",
+      "fields": {
+       "id": {
+        "dart": "int?",
+        "guarded": false,
+        "src": "id: json[\"id\"],"
+       },
+       "invoice_number": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "invoiceNumber: json[\"invoice_number\"],"
+       },
+       "payment_date": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "paymentDate: json[\"payment_date\"],"
+       },
+       "payable_amount": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "payableAmount: json[\"payable_amount\"],"
+       },
+       "paid_amount": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "paidAmount: json[\"paid_amount\"],"
+       },
+       "due_amount": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "dueAmount: json[\"due_amount\"],"
+       },
+       "status": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "status: json[\"status\"],"
+       },
+       "color_code": {
+        "dart": "String?",
+        "guarded": false,
+        "src": "colorCode: json[\"color_code\"],      )"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
