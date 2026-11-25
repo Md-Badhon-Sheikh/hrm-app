@@ -42,9 +42,9 @@ class ExpenseClaimResource extends Resource
                 Tables\Columns\TextColumn::make('invoice_number')->searchable(),
                 Tables\Columns\TextColumn::make('user.name')->label('Employee')->searchable(),
                 Tables\Columns\TextColumn::make('claim_date')->date('d M Y')->sortable(),
-                Tables\Columns\TextColumn::make('payable_amount')->label('Claimed')->money(fn () => \App\Models\Setting::get('currency_code', 'BDT')),
-                Tables\Columns\TextColumn::make('paid_amount')->label('Paid')->money(fn () => \App\Models\Setting::get('currency_code', 'BDT')),
-                Tables\Columns\TextColumn::make('due_amount')->label('Due')->money(fn () => \App\Models\Setting::get('currency_code', 'BDT'))->color(fn ($state) => $state > 0 ? 'danger' : 'success'),
+                Tables\Columns\TextColumn::make('payable_amount')->label('Claimed')->formatStateUsing(fn ($state) => \App\Support\Fmt::money($state)),
+                Tables\Columns\TextColumn::make('paid_amount')->label('Paid')->formatStateUsing(fn ($state) => \App\Support\Fmt::money($state)),
+                Tables\Columns\TextColumn::make('due_amount')->label('Due')->formatStateUsing(fn ($state) => \App\Support\Fmt::money($state))->color(fn ($state) => $state > 0 ? 'danger' : 'success'),
                 Tables\Columns\TextColumn::make('status_id')->label('Status')->badge()->formatStateUsing(fn ($state) => Status::name((int) $state))
                     ->color(fn ($state) => match ((int) $state) { Status::APPROVED => 'success', Status::REJECTED => 'danger', default => 'warning' }),
             ])

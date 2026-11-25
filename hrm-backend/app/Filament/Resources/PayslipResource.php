@@ -37,7 +37,7 @@ class PayslipResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('user.name')->label('Employee')->searchable(),
                 Tables\Columns\TextColumn::make('month')->sortable()->formatStateUsing(fn ($state) => \Carbon\Carbon::createFromFormat('Y-m', $state)->format('F Y')),
-                Tables\Columns\TextColumn::make('salary')->money(fn () => \App\Models\Setting::get('currency_code', 'BDT'))->sortable(),
+                Tables\Columns\TextColumn::make('salary')->formatStateUsing(fn ($state) => \App\Support\Fmt::money($state))->sortable(),
                 Tables\Columns\IconColumn::make('is_calculated')->label('In app')->boolean(),
             ])
             ->defaultSort('month', 'desc')

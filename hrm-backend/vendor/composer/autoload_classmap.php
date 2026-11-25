@@ -114,6 +114,7 @@ return array(
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\Filament\\AdminPanelProvider' => $baseDir . '/app/Providers/Filament/AdminPanelProvider.php',
     'App\\Support\\Files' => $baseDir . '/app/Support/Files.php',
+    'App\\Support\\Fmt' => $baseDir . '/app/Support/Fmt.php',
     'App\\Support\\Notifier' => $baseDir . '/app/Support/Notifier.php',
     'App\\Support\\SimplePdf' => $baseDir . '/app/Support/SimplePdf.php',
     'App\\Support\\Status' => $baseDir . '/app/Support/Status.php',

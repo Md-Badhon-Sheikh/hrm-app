@@ -793,6 +793,7 @@ class ComposerStaticInitaaf256c45637a7be274036fcdcd6f68b
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\Filament\\AdminPanelProvider' => __DIR__ . '/../..' . '/app/Providers/Filament/AdminPanelProvider.php',
         'App\\Support\\Files' => __DIR__ . '/../..' . '/app/Support/Files.php',
+        'App\\Support\\Fmt' => __DIR__ . '/../..' . '/app/Support/Fmt.php',
         'App\\Support\\Notifier' => __DIR__ . '/../..' . '/app/Support/Notifier.php',
         'App\\Support\\SimplePdf' => __DIR__ . '/../..' . '/app/Support/SimplePdf.php',
         'App\\Support\\Status' => __DIR__ . '/../..' . '/app/Support/Status.php',
