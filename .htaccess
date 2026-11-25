@@ -1,5 +1,10 @@
 # Document root on cPanel is this repo folder (public_html/hr.webase.info),
-# but the Laravel app lives in /hrm-backend/public. Send every request there.
+# but the Laravel app lives in /hrm-backend/public.
+#
+# This file does the whole job on its own and never relies on the .htaccess
+# inside hrm-backend/public being re-evaluated: LiteSpeed (unlike Apache)
+# does not re-run a sub-folder's .htaccess after a rewrite from here.
+#
 # If you later point the subdomain's Document Root at hrm-backend/public,
 # this file is simply never used.
 
@@ -12,6 +17,12 @@ Options -Indexes
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+    # Force HTTPS on the live domain only (local XAMPP keeps working on http)
+    RewriteCond %{HTTP_HOST} ^hr\.webase\.info$ [NC]
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     # Block dot-files/folders (.git, .env ...) except Let's Encrypt checks
     RewriteRule (^|/)\.(?!well-known(/|$)) - [F,L]
 
@@ -19,9 +30,15 @@ Options -Indexes
     RewriteRule ^flutter-app-patch(/|$) - [F,L]
     RewriteRule ^hrm-backend/(app|bootstrap|config|database|resources|routes|storage|tests|vendor|node_modules)(/|$) - [F,L]
 
-    # Everything else is served from hrm-backend/public
-    RewriteRule ^$ hrm-backend/public/ [L]
-    RewriteRule ^((?!hrm-backend/public/).*)$ hrm-backend/public/$1 [L,NC]
+    # A request that already targets hrm-backend/public is left alone
+    RewriteRule ^hrm-backend/public/ - [L]
+
+    # Real files inside hrm-backend/public (css, js, images, /storage uploads)
+    RewriteCond %{DOCUMENT_ROOT}/hrm-backend/public/$1 -f
+    RewriteRule ^(.+)$ hrm-backend/public/$1 [L]
+
+    # Everything else goes straight to the Laravel front controller
+    RewriteRule ^ hrm-backend/public/index.php [L]
 </IfModule>
 
 # Never serve secret files even if mod_rewrite is off
